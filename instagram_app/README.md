@@ -1,10 +1,6 @@
 # Instagram App
 
 
-## About
-
-
-
 
 ## Stack
 
