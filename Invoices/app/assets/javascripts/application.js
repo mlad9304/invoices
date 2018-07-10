@@ -13,6 +13,8 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require gijgo-core
+//= require datepicker
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
