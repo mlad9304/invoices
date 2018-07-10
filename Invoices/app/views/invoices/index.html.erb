@@ -4,7 +4,27 @@
   <div class="col col-md-8">
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">INVOICES</h3>
+        <div class="container-fluid row">
+          <div class="col-md-2">
+            <%= link_to 'New Invoice', new_invoice_path, class: "btn btn-primary" %>
+          </div>
+
+          <%= search_form_for @search, url: search_invoices_path, html: {class: "form-inline col-md-10 justify-content-center", method: :post} do |f| %>
+            <div class="input-daterange col-md-8 row justify-content-around">
+              <div class="col-md-4">
+                <%= f.text_field :date_gteq, class: "form-control date_gteq", placeholder: "Date >= to" %>
+              </div>
+              <div class="col-md-4">
+                <%= f.text_field :date_lteq, class: "form-control date_lteq", placeholder: "Date <= to" %>
+              </div>
+            </div>
+
+            <div class="col-md-4 form-actions">
+              <%= f.submit "Search", class: "btn btn-success" %>
+            </div>
+            
+          <% end %>
+        </div>
       </div>
       <div class="card-body">
         <table class="table table-hover table-bordered">
@@ -34,7 +54,7 @@
         </table>
       </div>
       <div class="card-footer">
-        <%= link_to 'New Invoice', new_invoice_path, class: "btn btn-primary" %>
+        
       </div>
     </div>
   </div>

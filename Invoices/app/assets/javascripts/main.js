@@ -12,7 +12,17 @@ $(document).ready(function() {
             $('.invoice_header_date').empty();
             $('.invoice_header_date').append(date);
         }
-    });
+		}); 
+		
+		$('.date_gteq').datepicker({
+			uiLibrary: 'bootstrap4',
+			format: 'yyyy-mm-dd',
+		});
+
+		$('.date_lteq').datepicker({
+			uiLibrary: 'bootstrap4',
+			format: 'yyyy-mm-dd',
+		});
 
     $('#9').blur(update_balance);
 
