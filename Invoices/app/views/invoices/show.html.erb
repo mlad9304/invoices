@@ -8,11 +8,6 @@
       </div>
       <div class="card-body">
         <p>
-          <strong>Amount:</strong>
-          <%= @invoice.amount %>
-        </p>
-
-        <p>
           <strong>Company:</strong>
           <%= @invoice.company %>
         </p>
@@ -23,8 +18,8 @@
         </p>
 
         <p>
-          <strong>Currency:</strong>
-          <%= @invoice.currency %>
+          <strong>Amount:</strong>
+          <%= @invoice.amount %> <%= @invoice.currency %>
         </p>
 
         <p>
